@@ -1,0 +1,19 @@
+<h1>Meetup Name: <%=@meetup.name%></h1>
+
+<ul>
+    <li><strong>Creator:</strong> <%=@meetup.creator%></li>
+    <li><strong>Description:</strong> <%=@meetup.description%></li>
+    <li><strong>Location:</strong> <%=@meetup.location%></li>
+</ul>
+
+<button type = "button" class="join-button"> Join this meetup! </button>
+
+<h2>Members</h2>
+
+
+<%@members.each do |member|%>
+<div class="member">
+  <img src='<%=member.avatar_url%>'/>
+  <span class="caption"><%=member.username%></span>
+</div>
+<%end%>
